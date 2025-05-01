@@ -1,1 +1,24 @@
-<button nz-button nzType="primary">Primary</button>
+<div class="layout-container">
+    <!-- Left Menu -->
+    <div class="menu-container">
+        <div class="site-title">
+            <span nz-icon nzType="tool" nzTheme="outline"></span>
+            <span>SWIM工具箱</span>
+        </div>
+        <ul nz-menu nzMode="inline" nzTheme="light">
+            <li nz-menu-item nzMatchRouter routerLink="/excel/split">
+                <span nz-icon nzType="file-excel" nzTheme="outline"></span>
+                <span>Excel拆分</span>
+            </li>
+            <li nz-menu-item nzMatchRouter routerLink="/text/compare">
+                <span nz-icon nzType="file-text" nzTheme="outline"></span>
+                <span>文本比对</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Right Content -->
+    <div class="content-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
