@@ -1,6 +1,40 @@
 <div class="excel-split-container">
-    <h2>Excel 拆分工具</h2>
-    <div class="content">
-        <!-- 这里添加 Excel 拆分功能的具体实现 -->
+    <div class="tool-header">
+        <h1>Excel文件切割工具</h1>
+        <p class="tool-desc">在线Excel文件切割工具，支持将一个Excel文件按指定行数切割拆分为多个小Excel文件</p>
+    </div>
+
+    <div class="tool-content">
+        <div class="tool-card">
+            <div class="split-options">
+                <div class="option-item">
+                    <span class="option-label">每个文件行数：</span>
+                    <nz-input-number [(ngModel)]="rowsPerFile" [nzMin]="1" [nzMax]="10000"
+                        class="option-input"></nz-input-number>
+                </div>
+            </div>
+
+            <div class="upload-area">
+                <nz-upload nzType="drag" [nzMultiple]="true" [nzCustomRequest]="customRequest"
+                    (nzChange)="handleChange($event)">
+                    <p class="ant-upload-drag-icon">
+                        <nz-icon nzType="inbox" />
+                    </p>
+                    <p class="ant-upload-text">点击或拖拽文件到此区域上传</p>
+                    <p class="ant-upload-hint">
+                        仅支持Excel文件上传（.xlsx, .xls）
+                    </p>
+                </nz-upload>
+            </div>
+        </div>
+
+        <div class="tool-info">
+            <h3>使用说明</h3>
+            <ol>
+                <li>上传Excel文件：点击上传或将文件拖入文件上传框</li>
+                <li>设置分割行数：输入希望每个小文件包含的行数</li>
+                <li>系统会自动将文件切割成多个部分并下载</li>
+            </ol>
+        </div>
     </div>
 </div>
