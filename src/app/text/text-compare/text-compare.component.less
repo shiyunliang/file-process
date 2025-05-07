@@ -1,0 +1,433 @@
+/* 使用指南区域样式 */
+.usage-guide {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+
+  // 指南标题
+  h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  // 指南内容网格布局
+  .guide-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+
+  // 单个指南项样式
+  .guide-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    // 指南图标
+    i {
+      font-size: 1.5rem;
+      color: #4a90e2;
+      margin-top: 5px;
+    }
+
+    // 指南文本内容
+    .guide-text {
+      h3 {
+        color: #2c3e50;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #666;
+        margin-bottom: 10px;
+        line-height: 1.5;
+      }
+
+      // 指南列表样式
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 5px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+
+          &::before {
+            content: "•";
+            color: #4a90e2;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 文本输入区域样式 */
+.text-inputs-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  .text-input-column {
+    flex: 1;
+    min-width: 0; // 防止flex子项溢出
+  }
+}
+
+/* 表单组样式 */
+.form-group {
+  height: 100%;
+  margin-bottom: 0;
+
+  label {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  textarea {
+    height: 200px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* 文本输入框样式 */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+
+  &:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    background-color: #fff;
+  }
+}
+
+/* 按钮基础样式 */
+.btn {
+  min-width: 120px;
+  padding: 10px 24px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 12px;
+
+  i {
+    font-size: 1.1rem;
+  }
+
+  // 主要按钮样式
+  &.btn-primary {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+
+    &:hover {
+      background: linear-gradient(135deg, #357abd 0%, #2c6aa0 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(74, 144, 226, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+    }
+  }
+
+  // 次要按钮样式
+  &.btn-secondary {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    color: #666;
+
+    &:hover {
+      background: linear-gradient(135deg, #e8e8e8 0%, #dcdcdc 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  // 警告按钮样式
+  &.btn-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+    color: white;
+
+    &:hover {
+      background: linear-gradient(135deg, #e0a800 0%, #c69500 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(255, 193, 7, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(255, 193, 7, 0.2);
+    }
+  }
+}
+
+/* 表格样式 */
+.table {
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+    padding: 12px 16px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  td {
+    white-space: pre-wrap;
+    word-break: break-all;
+    padding: 12px 16px;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  tbody tr {
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #f8f9fa;
+    }
+  }
+}
+
+/* 表格警告行样式 */
+.table-warning {
+  background-color: #fff9e6 !important;
+
+  &:hover {
+    background-color: #fff3cd !important;
+  }
+}
+
+/* 文本状态颜色 */
+.text-danger {
+  color: #e74c3c !important;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+.text-success {
+  color: #2ecc71 !important;
+  font-weight: 500;
+}
+
+.text-warning {
+  color: #f39c12 !important;
+  font-weight: 500;
+}
+
+/* 空格高亮样式 */
+.highlight-space {
+  background-color: #fff3cd;
+  padding: 2px 4px;
+  border-radius: 3px;
+  color: #856404;
+  font-weight: 500;
+  margin: 0 2px;
+}
+
+/* 标题样式 */
+h3 {
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* 差异详情样式 */
+.difference-details {
+  color: #e74c3c;
+  font-weight: 500;
+  white-space: normal;
+  word-break: break-all;
+  max-width: 300px;
+}
+
+/* 差异高亮样式 */
+.highlight-diff {
+  background-color: #ffeb3b;
+  color: #e74c3c;
+  font-weight: bold;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* 结果标题样式 */
+.result-title {
+  margin-top: 20px;
+}
+
+/* 处理后的文本样式 */
+.processed-text {
+  letter-spacing: 1.5px;
+  min-height: 200px;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #fafafa;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/* 响应式布局样式 */
+@media (max-width: 992px) {
+  .text-inputs-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  textarea {
+    min-height: 300px;
+  }
+
+  .usage-guide {
+    .guide-content {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .page-header {
+    margin-bottom: 30px;
+
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .page-description {
+      font-size: 1rem;
+    }
+  }
+
+  textarea {
+    min-height: 250px;
+  }
+
+  .btn {
+    min-width: 100px;
+    padding: 6px 16px;
+  }
+
+  .table {
+    font-size: 14px;
+
+    th,
+    td {
+      padding: 8px 12px;
+    }
+  }
+}
+
+/* 空格检测结果样式 */
+.space-differences {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 15px;
+
+  .space-diff-item {
+    margin-bottom: 20px;
+
+    h4 {
+      color: #2c3e50;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+
+      li {
+        color: #666;
+        padding: 8px 12px;
+        background-color: #fff;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  .no-differences {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+}
+
+/* 按钮样式补充 */
+.btn-info {
+  background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+  color: white;
+
+  &:hover {
+    background: linear-gradient(135deg, #138496 0%, #117a8b 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(23, 162, 184, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(23, 162, 184, 0.2);
+  }
+}
