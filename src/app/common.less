@@ -12,22 +12,63 @@
     text-align: left;
     margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #e0e0e0;
 
     // 页面标题
     .page-title {
         color: #2c3e50;
-        font-size: 1.8rem;
+        /* Default title size for large screens (>= 1920px) - 大屏幕默认标题大小 */
+        font-size: 28px;
         font-weight: 600;
         margin-bottom: 15px;
+
+        /* Large screens (1440px - 1919px) - 大屏幕 */
+        @media screen and (max-width: 1919px) {
+            font-size: 26px;
+        }
+
+        /* Medium screens (1024px - 1439px) - 中等屏幕 */
+        @media screen and (max-width: 1439px) {
+            font-size: 24px;
+        }
+
+        /* Small screens (768px - 1023px) - 小屏幕 */
+        @media screen and (max-width: 1023px) {
+            font-size: 22px;
+        }
+
+        /* Mobile screens (< 768px) - 移动端屏幕 */
+        @media screen and (max-width: 767px) {
+            font-size: 20px;
+        }
     }
 
     // 页面描述
     .page-description {
         color: #666;
-        font-size: 0.9rem;
+        /* Default description size for large screens (>= 1920px) - 大屏幕默认描述文字大小 */
+        font-size: 14px;
         max-width: 800px;
         margin: 0;
         line-height: 1.6;
+
+        /* Large screens (1440px - 1919px) - 大屏幕 */
+        @media screen and (max-width: 1919px) {
+            font-size: 13px;
+        }
+
+        /* Medium screens (1024px - 1439px) - 中等屏幕 */
+        @media screen and (max-width: 1439px) {
+            font-size: 12px;
+        }
+
+        /* Small screens (768px - 1023px) - 小屏幕 */
+        @media screen and (max-width: 1023px) {
+            font-size: 11px;
+        }
+
+        /* Mobile screens (< 768px) - 移动端屏幕 */
+        @media screen and (max-width: 767px) {
+            font-size: 10px;
+        }
     }
 }

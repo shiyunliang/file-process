@@ -24,18 +24,60 @@
   align-items: center;
   border-bottom: 1px solid #f0f0f0;
   background: #fff;
-  
+
   span {
     &:first-child {
+      /* Default icon size for large screens (>= 1920px) - 大屏幕默认图标大小 */
       font-size: 20px;
       margin-right: 8px;
       color: #1890ff;
+
+      /* Large screens (1440px - 1919px) - 大屏幕 */
+      @media screen and (max-width: 1919px) {
+        font-size: 19px;
+      }
+
+      /* Medium screens (1024px - 1439px) - 中等屏幕 */
+      @media screen and (max-width: 1439px) {
+        font-size: 18px;
+      }
+
+      /* Small screens (768px - 1023px) - 小屏幕 */
+      @media screen and (max-width: 1023px) {
+        font-size: 17px;
+      }
+
+      /* Mobile screens (< 768px) - 移动端屏幕 */
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+      }
     }
-    
+
     &:last-child {
+      /* Default title size for large screens (>= 1920px) - 大屏幕默认标题大小 */
       font-size: 22px;
       font-weight: 600;
       color: #262626;
+
+      /* Large screens (1440px - 1919px) - 大屏幕 */
+      @media screen and (max-width: 1919px) {
+        font-size: 21px;
+      }
+
+      /* Medium screens (1024px - 1439px) - 中等屏幕 */
+      @media screen and (max-width: 1439px) {
+        font-size: 20px;
+      }
+
+      /* Small screens (768px - 1023px) - 小屏幕 */
+      @media screen and (max-width: 1023px) {
+        font-size: 19px;
+      }
+
+      /* Mobile screens (< 768px) - 移动端屏幕 */
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+      }
     }
   }
 }
@@ -47,4 +89,56 @@
   background: #fff;
 }
 
+/* Menu styles - 菜单样式 */
+.ant-menu {
+  /* Default font size for large screens (>= 1920px) - 大屏幕默认字体大小 */
+  font-size: 16px;
 
+  /* Large screens (1440px - 1919px) - 大屏幕 */
+  @media screen and (max-width: 1919px) {
+    font-size: 15px;
+  }
+
+  /* Medium screens (1024px - 1439px) - 中等屏幕 */
+  @media screen and (max-width: 1439px) {
+    font-size: 14px;
+  }
+
+  /* Small screens (768px - 1023px) - 小屏幕 */
+  @media screen and (max-width: 1023px) {
+    font-size: 13px;
+  }
+
+  /* Mobile screens (< 768px) - 移动端屏幕 */
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+/* Menu item icon styles - 菜单项图标样式 */
+.ant-menu-item {
+  .anticon {
+    /* Default icon size for large screens - 大屏幕默认图标大小 */
+    font-size: 18px;
+
+    /* Large screens (1440px - 1919px) - 大屏幕 */
+    @media screen and (max-width: 1919px) {
+      font-size: 17px;
+    }
+
+    /* Medium screens (1024px - 1439px) - 中等屏幕 */
+    @media screen and (max-width: 1439px) {
+      font-size: 16px;
+    }
+
+    /* Small screens (768px - 1023px) - 小屏幕 */
+    @media screen and (max-width: 1023px) {
+      font-size: 15px;
+    }
+
+    /* Mobile screens (< 768px) - 移动端屏幕 */
+    @media screen and (max-width: 767px) {
+      font-size: 14px;
+    }
+  }
+}

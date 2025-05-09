@@ -1,121 +1,188 @@
- .tool-header {
-     max-width: 800px;
-     margin: 0 0 32px;
-     text-align: left;
+/* Header section styles - 头部区域样式 */
+.tool-header {
+    max-width: 800px;
+    /* Maximum width of the header - 头部最大宽度 */
+    margin: 0 0 32px;
+    /* Bottom margin spacing - 底部外边距 */
+    text-align: left;
+    /* Left align text - 文本左对齐 */
 
-     h1 {
-         font-size: 32px;
-         color: #1f2329;
-         margin-bottom: 16px;
-         font-weight: 600;
-     }
+    h1 {
+        font-size: 32px;
+        /* Large title size - 大标题字号 */
+        color: #1f2329;
+        /* Dark gray color for title - 标题深灰色 */
+        margin-bottom: 16px;
+        /* Space below title - 标题下方间距 */
+        font-weight: 600;
+        /* Semi-bold font weight - 半粗体字重 */
+    }
 
-     .tool-desc {
-         font-size: 16px;
-         color: #646a73;
-         line-height: 1.6;
-     }
- }
+    .tool-desc {
+        font-size: 16px;
+        /* Description text size - 描述文字大小 */
+        color: #646a73;
+        /* Medium gray color for description - 描述文字中灰色 */
+        line-height: 1.6;
+        /* Comfortable line spacing - 舒适的行高 */
+    }
+}
 
- .tool-content {
-     max-width: 800px;
-     margin: 0;
+/* Main content area styles - 主要内容区域样式 */
+.tool-content {
+    max-width: 800px;
+    /* Maximum width of content - 内容最大宽度 */
+    margin: 0;
+    /* Reset margin - 重置外边距 */
 
-     .tool-card {
-         background: #f6f8fa;
-         border-radius: 12px;
-         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-         padding: 24px;
-         margin-bottom: 24px;
+    /* Card container styles - 卡片容器样式 */
+    .tool-card {
+        background: #f6f8fa;
+        /* Light gray background - 浅灰色背景 */
+        border-radius: 12px;
+        /* Rounded corners - 圆角边框 */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        /* Subtle shadow effect - 轻微阴影效果 */
+        padding: 24px;
+        /* Inner spacing - 内边距 */
+        margin-bottom: 24px;
+        /* Bottom margin - 底部外边距 */
 
-         .split-options {
-             margin-bottom: 24px;
+        /* Split options section - 分割选项部分 */
+        .split-options {
+            margin-bottom: 24px;
+            /* Bottom margin - 底部外边距 */
 
-             .option-item {
-                 display: flex;
-                 align-items: center;
-                 gap: 12px;
-                 padding: 16px;
-                 background: #fff;
-                 border-radius: 8px;
-                 border: 1px solid #dcdfe6;
+            /* Individual option item - 单个选项项 */
+            .option-item {
+                display: flex;
+                /* Flexbox layout - 弹性布局 */
+                align-items: center;
+                /* Center items vertically - 垂直居中对齐 */
+                gap: 12px;
+                /* Space between items - 项目间距 */
+                padding: 16px;
+                /* Inner spacing - 内边距 */
+                background: #fff;
+                /* White background - 白色背景 */
+                border-radius: 8px;
+                /* Rounded corners - 圆角边框 */
+                border: 1px solid #dcdfe6;
+                /* Light border - 浅色边框 */
 
-                 .option-label {
-                     font-size: 15px;
-                     color: #1f2329;
-                     font-weight: 500;
-                     white-space: nowrap;
-                 }
+                .option-label {
+                    font-size: 15px;
+                    /* Label text size - 标签文字大小 */
+                    color: #1f2329;
+                    /* Dark gray color - 深灰色 */
+                    font-weight: 500;
+                    /* Medium font weight - 中等字重 */
+                    white-space: nowrap;
+                    /* Prevent text wrapping - 防止文字换行 */
+                }
 
-                 .option-input {
-                     width: 160px;
-                 }
-             }
-         }
+                .option-input {
+                    width: 160px;
+                    /* Fixed input width - 固定输入框宽度 */
+                }
+            }
+        }
 
-         .upload-area {
-             nz-upload {
-                 display: block;
-                 padding: 32px;
-                 background: #fff;
-                 border: 2px dashed #dcdfe6;
-                 border-radius: 8px;
-                 transition: all 0.3s;
+        /* File upload area - 文件上传区域 */
+        .upload-area {
+            nz-upload {
+                display: block;
+                /* Block display - 块级显示 */
+                padding: 32px;
+                /* Inner spacing - 内边距 */
+                background: #fff;
+                /* White background - 白色背景 */
+                border: 2px dashed #dcdfe6;
+                /* Dashed border - 虚线边框 */
+                border-radius: 8px;
+                /* Rounded corners - 圆角边框 */
+                transition: all 0.3s;
+                /* Smooth transition effect - 平滑过渡效果 */
 
-                 &:hover {
-                     border-color: #1890ff;
-                     background: #e6f7ff;
-                 }
+                &:hover {
+                    border-color: #1890ff;
+                    /* Blue border on hover - 悬停时蓝色边框 */
+                    background: #e6f7ff;
+                    /* Light blue background on hover - 悬停时浅蓝色背景 */
+                }
 
-                 .ant-upload-drag-icon {
-                     margin-bottom: 16px;
+                .ant-upload-drag-icon {
+                    margin-bottom: 16px;
+                    /* Space below icon - 图标下方间距 */
 
-                     nz-icon {
-                         font-size: 48px;
-                         color: #1890ff;
-                     }
-                 }
+                    nz-icon {
+                        font-size: 48px;
+                        /* Large icon size - 大图标尺寸 */
+                        color: #1890ff;
+                        /* Blue icon color - 蓝色图标 */
+                    }
+                }
 
-                 .ant-upload-text {
-                     font-size: 16px;
-                     color: #1f2329;
-                     margin-bottom: 8px;
-                 }
+                .ant-upload-text {
+                    font-size: 16px;
+                    /* Upload text size - 上传文字大小 */
+                    color: #1f2329;
+                    /* Dark gray color - 深灰色 */
+                    margin-bottom: 8px;
+                    /* Bottom margin - 底部外边距 */
+                }
 
-                 .ant-upload-hint {
-                     font-size: 14px;
-                     color: #646a73;
-                 }
-             }
-         }
-     }
+                .ant-upload-hint {
+                    font-size: 14px;
+                    /* Hint text size - 提示文字大小 */
+                    color: #646a73;
+                    /* Medium gray color - 中灰色 */
+                }
+            }
+        }
+    }
 
-     .tool-info {
-         background: #f6f8fa;
-         border-radius: 12px;
-         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-         padding: 24px;
+    /* Information section - 信息说明部分 */
+    .tool-info {
+        background: #f6f8fa;
+        /* Light gray background - 浅灰色背景 */
+        border-radius: 12px;
+        /* Rounded corners - 圆角边框 */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        /* Subtle shadow - 轻微阴影 */
+        padding: 24px;
+        /* Inner spacing - 内边距 */
 
-         h3 {
-             font-size: 18px;
-             color: #1f2329;
-             margin-bottom: 16px;
-             font-weight: 600;
-         }
+        h3 {
+            font-size: 18px;
+            /* Heading size - 标题大小 */
+            color: #1f2329;
+            /* Dark gray color - 深灰色 */
+            margin-bottom: 16px;
+            /* Bottom margin - 底部外边距 */
+            font-weight: 600;
+            /* Semi-bold font weight - 半粗体字重 */
+        }
 
-         ol {
-             margin: 0;
-             padding-left: 20px;
+        ol {
+            margin: 0;
+            /* Reset margin - 重置外边距 */
+            padding-left: 20px;
+            /* Left padding for list - 列表左内边距 */
 
-             li {
-                 color: #646a73;
-                 line-height: 1.8;
-                 margin-bottom: 8px;
+            li {
+                color: #646a73;
+                /* Medium gray color - 中灰色 */
+                line-height: 1.8;
+                /* Comfortable line spacing - 舒适的行高 */
+                margin-bottom: 8px;
+                /* Space between list items - 列表项间距 */
 
-                 &:last-child {
-                     margin-bottom: 0;
-                 }
-             }
-         }
-     }
- }
+                &:last-child {
+                    margin-bottom: 0;
+                    /* Remove margin from last item - 移除最后一项的底部间距 */
+                }
+            }
+        }
+    }
+}
