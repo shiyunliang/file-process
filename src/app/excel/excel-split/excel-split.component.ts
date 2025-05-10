@@ -7,11 +7,12 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { FormsModule } from '@angular/forms';
 import * as XLSX from 'xlsx';
 import { Observable, Subscription } from 'rxjs';
+import { PageHeaderComponent } from '../../../component/page-header/page-header.component';
 
 @Component({
   selector: 'app-excel-split',
   standalone: true,
-  imports: [NzButtonModule, NzIconModule, NzUploadModule, NzInputNumberModule, FormsModule],
+  imports: [NzButtonModule, NzIconModule, NzUploadModule, NzInputNumberModule, FormsModule, PageHeaderComponent],
   templateUrl: './excel-split.component.html',
   styleUrl: './excel-split.component.less'
 })

@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TextCompareComponent } from './text-compare.component';
 
-describe('TextCompareComponent', () => {
-  let component: TextCompareComponent;
-  let fixture: ComponentFixture<TextCompareComponent>;
+import { PageHeaderComponent } from './page-header.component';
+
+describe('PageHeaderComponent', () => {
+  let component: PageHeaderComponent;
+  let fixture: ComponentFixture<PageHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TextCompareComponent]
+      declarations: [PageHeaderComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TextCompareComponent);
+    fixture = TestBed.createComponent(PageHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

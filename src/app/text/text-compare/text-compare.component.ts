@@ -1,9 +1,11 @@
 import { Component, ElementRef } from "@angular/core";
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { PageHeaderComponent } from '../../../component/page-header/page-header.component';
 
 @Component({
   selector: 'app-text-compare',
-  standalone: false,
+  standalone: true,
+  imports: [PageHeaderComponent],
   templateUrl: './text-compare.component.html',
   styleUrl: './text-compare.component.less'
 })

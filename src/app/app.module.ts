@@ -16,13 +16,13 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { ExcelSplitComponent } from './excel/excel-split/excel-split.component';
 import { TextCompareComponent } from './text/text-compare/text-compare.component';
 import { NgOptimizedImage } from '@angular/common';
+import { PageHeaderComponent } from '../component/page-header/page-header.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    TextCompareComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,9 @@ registerLocaleData(en);
     NzMenuModule,
     NzIconModule,
     ExcelSplitComponent,
-    NgOptimizedImage
+    TextCompareComponent,
+    NgOptimizedImage,
+    PageHeaderComponent
   ],
   providers: [
     provideNzI18n(en_US),
